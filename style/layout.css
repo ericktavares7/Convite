@@ -1,0 +1,64 @@
+main{
+  padding: 4rem;
+  overflow-y: auto;
+}
+
+#page {
+  background: var(--shape-body);
+  min-height: 100vh;
+  display: flex;
+  justify-content: left;
+  padding: 2rem;
+}
+
+#convite{
+  width: 100%;
+  max-width: 70rem;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: var(--shape-background);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+/* Foi necessario fazer assim para a imagem do bolo ficar por tras dop texto e logo */
+
+.aside-hero {
+  padding: 2rem;
+  background-image: url(../assets/fundos/Background.png);
+  background-size: cover;
+  background-position: center bottom;
+  
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+
+  h1 {
+    font: var(--text-logo);
+    color: var(--pink);
+  }
+
+  p {
+    color: var(--text-heading);
+    font: var(--text-body-md-regular);
+  }
+
+}
+
+/* Efeito degradê */
+
+.aside-hero::before{
+  content: "";
+  position: relative;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.aside-hero * {
+  position: relative;
+  z-index: 1;
+}
