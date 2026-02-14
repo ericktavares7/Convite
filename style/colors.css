@@ -1,0 +1,46 @@
+.colors {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.color {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.color:hover {
+  border: 2px solid var(--brand-light);
+}
+
+.purple {
+  background: var(--purple);
+}
+
+.pink {
+  background: var(--pink);
+}
+
+.orange {
+  background: var(--orange);
+}
+
+.yellow {
+  background: var(--yellow);
+}
+
+.green {
+  background: var(--green);
+}
+
+.cyan {
+  background: var(--cyan);
+}
+
+.navy {
+  background: var(--navy);
+}

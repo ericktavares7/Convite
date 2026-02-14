@@ -15,7 +15,7 @@
 
 <body>
   <div id="page">
-    <div id="convite">
+    <div id="card-convite">
       <div class="aside-hero">
         <aside>
           <img src="assets/fundos/Logo.svg" alt="logo-convite">
@@ -23,11 +23,182 @@
           <p>Crie um convite digital para o seu evento</p>
         </aside>
       </div>
-
       <main>
+        <form method="post" enctype="multipart/form-data">
+          <fieldset class="Inicio">
+            <h1>Crie seu convite</h1>
 
-      </main>
+            <h2 class="section-title">
+              <img src="assets/icons/calendar.svg" alt="calendario">
+              Sobre o evento
+            </h2>
+
+            <label>
+              Título
+              <input type="text" placeholder="Nome do evento">
+            </label>
+
+            <div class="row date-hour">
+              <label>
+                Data
+                <input type="date">
+              </label>
+
+              <label>
+                Hora
+                <input type="time">
+              </label>
+            </div>
+
+            <label class="description">
+              Descrição
+              <textarea rows="4" placeholder="Escreva detalhes do evento"></textarea>
+            </label>
+
+          </fieldset>
+
+          <fieldset class="personalização">
+            <h2 class="section-title">
+              <img src="assets/icons/paintbrush-vertical.svg" alt="">
+              Personalização
+            </h2>
+            <label>
+              Tema
+            </label>
+
+            <div class="colors">
+              <span class="color purple"></span>
+              <span class="color pink"></span>
+              <span class="color orange"></span>
+              <span class="color yellow"></span>
+              <span class="color green"></span>
+              <span class="color cyan"></span>
+              <span class="color navy"></span>
+            </div>
+
+            <div class="themes-grid">
+              <label class="theme-card">
+                <input type="radio" name="tema" value="aniversario" checked>
+                <img src="assets/temas/aniversario.png" alt="foto-aniversario">
+                <span>Aniversário</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="infantil">
+                <img src="assets/temas/infantil.png" alt="Infantil">
+                <span>Infantil</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="formatura">
+                <img src="assets/temas/formatura.png" alt="Formatura">
+                <span>Formatura</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="casamento">
+                <img src="assets/temas/casamento.png" alt="Casamento">
+                <span>Casamento</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="cha-de-bebe">
+                <img src="assets/temas/cha-de-bebe.png" alt="cha-de-bebe">
+                <span>Chá de Bebê</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="cha-de-panela">
+                <img src="assets/temas/cha-de-panela.png" alt="Cha-de-panela">
+                <span>Chá de panela</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="carnaval">
+                <img src="assets/temas/carnaval.png" alt="Carnaval">
+                <span>Carnaval</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="pascoa">
+                <img src="assets/temas/pascoa.png" alt="Páscoa">
+                <span>Páscoa</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="sao-joao">
+                <img src="assets/temas/sao-joao.png" alt="Sao-Joao">
+                <span>São João</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="natal">
+                <img src="assets/temas/natal.png" alt="Natal">
+                <span>Natal</span>
+              </label>
+
+              <label class="theme-card">
+                <input type="radio" name="tema" value="outro">
+                <img src="assets/temas/outro.png" alt="Outro">
+                <span>Outro</span>
+              </label>
+            </div>
+
+            <div class="style-toggle">
+              <span>Estilo</span>
+
+              <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+              </label>
+              <span>Escuro</span>
+
+              <script>
+                const toggle = document.getElementById("darkModeToggle");
+
+                toggle.addEventListener("change", () => {
+                  document.body.classList.toggle("light-mode");
+                });
+              </script>
+            </div>
+
+            <div class="uploud-section">
+
+            </div>
+          </fieldset>
+
+          <fieldset class="contato">
+            <h2 class="section-title">
+              <img src="assets/icons/contact.svg" alt="">
+              Contato
+            </h2>
+
+            <label>
+              Nome
+              <input type="text" placeholder="Seu nome">
+            </label>
+
+            <div class="row">
+              <label>
+                Email
+                <input type="email" placeholder="email@exemplo.com">
+              </label>
+
+              <label>
+                Telefone
+                <input type="tel" placeholder="(00 00000-0000)">
+              </label>
+            </div>
+          </fieldset>
+
+          <button type="submit">
+            Gerar Convite
+          </button>
     </div>
+    </form>
+    </main>
+  </div>
+
   </div>
 </body>
 

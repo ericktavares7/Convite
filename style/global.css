@@ -8,6 +8,9 @@
 
   /* Fonte */
 
+  --button-primary-bg: var(--brand-mid);
+  --button-primary-text: #FFFFFF;
+
   --font-family-logo: "Leckerli One";
   --font-family-heading: "Baloo 2";
   --font-family-body: "Open Sans";
@@ -57,13 +60,51 @@
   --lime: #E1FF59;
   --green: #59FF91;
   --cyan: #59FFF9;
-  --navy: #6A59FF; 
+  --navy: #6A59FF;
 
   /* Brand */
 
   --brand-light: #59B2FF;
   --brand-mid: #3487CF;
   --brand-dark: #1D6FB6;
-  
+
 }
 
+body {
+  background: var(--shape-body);
+  color: var(--text-body);
+}
+
+body.light-mode {
+
+  --button-primary-bg: #000000;
+  --button-primary-text: #FFFFFF;
+
+  /* Shape */
+  --shape-body: #F5F6F8;
+  --shape-background: #FFFFFF;
+  --shape-button: #E4E6EB;
+  --shape-hover: #DADDE1;
+
+  /* Input */
+  --input-base: #FFFFFF;
+  --input-stroke: #D0D5DA;
+  --input-placeholder: #6B7280;
+
+  /* Text */
+  --text-heading: #000000;
+  --text-body: #333333;
+
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text-heading);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
