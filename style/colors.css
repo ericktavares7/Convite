@@ -1,46 +1,94 @@
+/* ========================================
+   🎨 SELETOR DE CORES
+======================================== */
+
 .colors {
   display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1.75rem;
 }
 
+/* Bolinha base */
 .color {
   width: 28px;
   height: 28px;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
+/* Hover */
 .color:hover {
-  border: 2px solid var(--brand-light);
+  transform: scale(1.1);
+  border-color: var(--color-primary);
 }
 
+/* Estado selecionado */
+.color.selected {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+/* ========================================
+   🎨 CORES DISPONÍVEIS
+======================================== */
+
+/* Roxo */
 .purple {
-  background: var(--purple);
+  background-color: #7c3aed;
 }
 
+/* Rosa */
 .pink {
-  background: var(--pink);
+  background-color: #ec4899;
 }
 
+/* Laranja */
 .orange {
-  background: var(--orange);
+  background-color: #f97316;
 }
 
+/* Amarelo */
 .yellow {
-  background: var(--yellow);
+  background-color: #eab308;
 }
 
+/* Verde */
 .green {
-  background: var(--green);
+  background-color: #22c55e;
 }
 
+/* Ciano */
 .cyan {
-  background: var(--cyan);
+  background-color: #06b6d4;
 }
 
+/* Azul escuro */
 .navy {
-  background: var(--navy);
+  background-color: #1e3a8a;
 }
+
+/* Fushia */
+
+.fushia{
+  background-color: #FF59F9;
+}
+
+.lime{
+  background-color: #E1FF59;
+}
+
+.danger{
+  background: #FF5959;
+  
+}
+
+.ligh{
+  background: #59B2FF;
+}
+

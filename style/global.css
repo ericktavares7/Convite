@@ -1,20 +1,33 @@
+/* =========================
+   RESET
+========================= */
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* =========================
+   ROOT VARIABLES
+========================= */
 
 :root {
 
-  /* Fonte */
+  /* Brand */
+  --brand-light: #59B2FF;
+  --brand-mid: #3487CF;
+  --brand-dark: #1D6FB6;
 
   --button-primary-bg: var(--brand-mid);
   --button-primary-text: #FFFFFF;
 
-  --font-family-logo: "Leckerli One";
-  --font-family-heading: "Baloo 2";
-  --font-family-body: "Open Sans";
+  /* Font Family */
+  --font-family-logo: "Leckerli One", cursive;
+  --font-family-heading: "Baloo 2", sans-serif;
+  --font-family-body: "Open Sans", sans-serif;
 
+  /* Typography */
   --text-logo: 400 2.5rem var(--font-family-logo);
 
   --text-heading-md: 700 1.75rem var(--font-family-heading);
@@ -26,17 +39,15 @@
   --text-body-sm: 400 0.87rem var(--font-family-body);
   --text-body-sm-semibold: 600 0.87rem var(--font-family-body);
 
-  --text-body-xs: 400 0.87rem var(--font-family-body);
+  --text-body-xs: 400 0.75rem var(--font-family-body);
   --text-body-xs-semibold: 600 0.75rem var(--font-family-body);
 
   /* Input */
-
   --input-base: #1C1F21;
   --input-stroke: #363B40;
   --input-placeholder: #869198;
 
   /* Shape */
-
   --shape-hover: #383D42;
   --shape-button: #2D3136;
   --shape-body: #212427;
@@ -47,33 +58,23 @@
   --text-body: #C8CDD0;
 
   /* Feedback */
-
   --danger: #FF5959;
 
-  /* Cores */
-
-  --purple: purple;
-  --fuchia: #FF59F9;
-  --pink: #FF598B;
-  --orange: #FF8B59;
-  --yellow: #FFCD59;
-  --lime: #E1FF59;
-  --green: #59FF91;
-  --cyan: #59FFF9;
-  --navy: #6A59FF;
-
-  /* Brand */
-
-  --brand-light: #59B2FF;
-  --brand-mid: #3487CF;
-  --brand-dark: #1D6FB6;
-
 }
+
+/* =========================
+   BODY
+========================= */
 
 body {
   background: var(--shape-body);
   color: var(--text-body);
+  font-family: var(--font-family-body);
 }
+
+/* =========================
+   LIGHT MODE
+========================= */
 
 body.light-mode {
 
@@ -94,8 +95,11 @@ body.light-mode {
   /* Text */
   --text-heading: #000000;
   --text-body: #333333;
-
 }
+
+/* =========================
+   HEADINGS
+========================= */
 
 h1,
 h2,
@@ -103,8 +107,24 @@ h3 {
   color: var(--text-heading);
 }
 
+/* =========================
+   MEDIA
+========================= */
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* =========================
+   PAGE WRAPPER
+========================= */
+
+#page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--shape-body);
 }

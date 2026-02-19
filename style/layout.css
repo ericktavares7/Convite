@@ -1,3 +1,7 @@
+/* =========================
+   LAYOUT GERAL
+========================= */
+
 main {
   display: flex;
   flex-direction: column;
@@ -5,58 +9,74 @@ main {
   overflow-y: auto;
 }
 
-#page {
-  background: var(--shape-body);
-  min-height: 100vh;
+aside {
+  width: 400px;
+  height: 100%;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  flex-shrink: 0;
+  background-image: url(../assets/fundos/Background.png);
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.aside-hero {
+  display: flex;
+  width: 1100px;
+  height: 728px;
+  border-radius: 2rem;
+  overflow: hidden;
+  background: var(--shape-background);
+  border: 1px solid var(--input-stroke);
+}
+
+.cor-principal {
+  margin-top: 1.5rem;
+}
+
+.header-personalizacao {
+  display: flex;
   align-items: center;
-  padding: 2rem;
+  gap: .5rem;
+}
+
+.header-personalizacao img {
+  width: 24px;
+  height: 24px;
+  transform: translateY(15px);
 }
 
 #card-convite {
-  padding: 2rem;
-  width: 100%;
-  max-width: 70rem;
-  height: 90vh;
-  display: grid;
-  grid-template-columns: 40% 60%;
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
   background: var(--shape-background);
-  border-radius: 1.5rem;
-  overflow: hidden;
 }
 
 #card-convite main {
   padding: 3rem 4rem;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Foi necessario fazer assim para a imagem do bolo ficar por tras do texto e logo */
+/* =========================
+   SCROLL
+========================= */
 
-.aside-hero {
-  position: relative;
-  padding: 2rem;
-  background-image: url(../assets/fundos/Background.png);
-  background-size: cover;
-  background-position: center;
-  border-radius: 1rem;
-  overflow: hidden;
-
-
-  h1 {
-    font: var(--text-logo);
-    color: var(--pink);
-  }
-
-  p {
-    color: var(--text-heading);
-    font: var(--text-body-md-regular);
-  }
-
+#card-convite::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Efeito degradê */
+#card-convite::-webkit-scrollbar-thumb {
+  background: var(--input-stroke);
+  border-radius: 10px;
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
 button {
   background: var(--button-primary-bg);
   color: var(--button-primary-text);
@@ -66,6 +86,7 @@ button {
   cursor: pointer;
   transition: 0.2s ease;
 }
+
 button:hover {
   filter: brightness(1.1);
 }
@@ -74,78 +95,9 @@ body.light-mode button:hover {
   background: #222;
 }
 
-.aside-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(0, 0, 0, 0.062),
-      rgba(0, 0, 0, 0.007));
-  z-index: 0;
-
-}
-
-.aside-hero * {
-  position: relative;
-  z-index: 1;
-}
-
-.aside-hero {
-  
-  width: 100%;
-  max-width: 500px; /* limite máximo */
-
-  --text-heading: #F9F9F9;
-  --text-body: #C8CDD0;
-}
-
-
-main h1 {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-
-  font: var(--text-heading-md);
-  color: var(--text-heading);
-}
-
-main h2 {
-  color: var(--text-heading);
-  font: var(--text-heading-sm);
-  margin-top: 2.5rem;
-}
-
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-
-  color: var(--text-heading);
-  font: var(--text-heading-sm);
-  margin-top: 2rem;
-}
-
-.section-title img {
-  width: 20px;
-  height: 20px;
-}
-
-.date-hour {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: var(--text-body);
-  font: var(--text-body-sm-regular);
-}
-
-.description {
-  margin-top: 1rem;
-}
+/* =========================
+   FORM
+========================= */
 
 form {
   display: flex;
@@ -160,17 +112,177 @@ fieldset {
   gap: 1rem;
 }
 
-input,
-textarea{
-   background: var(--input-base);
+.Inicio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 5rem;
+}
+
+label {
+  color: var(--text-body);
+  font: var(--text-body-sm-regular);
+}
+
+/* =========================
+   ROWS
+========================= */
+
+.row-field {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.row-field .field {
+  flex: 1;
+  /* ESSENCIAL para dividir espaço */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.grid-container input,
+.grid-container textarea,
+.grid-container .radio-group {
+  width: 100%;
+  box-sizing: border-box;
+  /* Evita que o padding "estoure" a largura */
+}
+
+textarea {
+  resize: vertical; /* Permite aumentar apenas a altura */
+  min-height: 100px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input:not([type="radio"]),
+textarea,
+.radio-group {
+  font: inherit;
+  background: var(--input-base)!important;
   border: 1px solid var(--input-stroke);
   color: var(--text-heading);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.radio-option input {
+  display: none !important;
+}
+
+.radio-group {
+  padding: 4px; 
 }
 
 input::placeholder,
 textarea::placeholder {
   color: var(--input-placeholder);
 }
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 0.125rem rgba(124, 58, 237, 0.2);
+}
+
+/* =========================
+   TITULOS
+========================= */
+
+main h1 {
+  font: var(--text-heading-md);
+  color: var(--text-heading);
+}
+
+.section-header {
+  display: flex;         /* Coloca os itens lado a lado */
+  align-items: center;   /* Centraliza o ícone verticalmente com o texto */
+  gap: 12px;             /* Espaçamento entre o ícone e o texto */
+  margin-top: 32px;      /* Espaço acima da seção */
+  margin-bottom: 16px;   /* Espaço antes de começar os inputs */
+}
+
+.section-header img {
+  width: 1.5rem;
+  height: 1rem;
+  display: block;        /* Remove espaços fantasmas abaixo da imagem */
+}
+
+.section-header h2 {
+  margin: 0;             /* Remove a margem padrão do H2 que pode causar desalinhamento */
+  font: var(--text-heading-sm);
+  color: var(--text-heading);
+}
+
+/* =========================
+   RADIO CUSTOM
+========================= */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-label {
+  font-size: var(--text-body-sm);
+  color: var(--text-body);
+}
+
+.radio-group {
+  display: flex;
+  background: var(--input-base);
+  padding: 4px;
+  border-radius: 8px;
+  gap: 4px;
+  border: 1px solid var(--input-stroke);
+}
+
+.radio-option input {
+  display: none;
+}
+
+.radio-option {
+  cursor: pointer;
+  flex: 1;
+}
+
+.radio-option .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 6px;
+  color: var(--text-body);
+  transition: 0.2s;
+  height: 100%;
+}
+
+.radio-option:hover .content {
+  background: var(--shape-hover);
+  color: var(--brand-dark);
+}
+
+.radio-option input:checked+.content {
+  background: var(--brand-dark);
+  color: white;
+  box-shadow: 0 0 0 1px var(--input-focus);
+}
+
+/* =========================
+   THEMES GRID
+========================= */
 
 .themes-grid {
   display: grid;
@@ -185,12 +297,10 @@ textarea::placeholder {
   cursor: pointer;
   transition: 0.2s;
   border: 2px solid transparent;
-
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
-
 
 .theme-card input {
   display: none;
@@ -217,3 +327,160 @@ textarea::placeholder {
   border: 2px solid var(--brand-light);
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+  padding-bottom: 3rem;
+}
+
+.form-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.form-contact input {
+  width: 100%;
+  height: 3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  /* Essencial para o padding não 'expulsar' o input da tela */
+}
+
+.form-contact .row {
+  display: contents;
+  /* Faz com que a div row não interfira no grid pai */
+}
+
+.field-group input, 
+.field-group textarea,
+.field-group .radio-group {
+  width: 100%;
+  height: 3rem; /* Altura padrão para todos os campos ficarem iguais */
+  box-sizing: border-box;
+}
+
+.contact img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.error-message {
+  display: none;
+  color: var(--danger);
+  font-size: 12px;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+input:invalid:not(:placeholder-shown) {
+  border-color: #FF5959;
+}
+
+input:invalid:not(:placeholder-shown)~.error-message {
+  display: flex;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #363B40;
+  margin: 16px 0;
+}
+
+.terms {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.terms label {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+}
+
+.terms input[type="checkbox"]:checked {
+  background: var(--input-base);
+  border-color: #007bff;
+}
+
+.terms input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  top: 2px;
+  left: 5px;
+}
+
+.terms a {
+  text-decoration: none;
+  color: var(--brand-light);
+}
+
+.terms input[type="checkbox"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0.125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: .25rem;
+  border: 1px solid var(--brand-light);
+  background: var(--input-base);
+  cursor: pointer;
+  position: relative;
+}
+
+.form-label span {
+  display: flex;
+  padding: 0.25rem 0;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.button-final {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.btn {
+  display: flex;
+  height: 3rem;
+  padding: 0.25rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--brand-dark);
+}
+
+.btn img {
+  width: 1.25rem;
+  height: 1.25rem;
+
+}
