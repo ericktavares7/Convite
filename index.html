@@ -34,7 +34,7 @@
       <div id="card-convite">
 
         <main>
-          <form method="post" enctype="multipart/form-data">
+          <form novalidate>
 
             <!-- ================= INICIO ================= -->
             <fieldset class="Inicio">
@@ -111,186 +111,210 @@
 
             <!-- ================= PERSONALIZAÇÃO ================= -->
             <div class="container">
-
               <div class="card">
-                <div class="header-personalizacao">
+                <div class="section-header personalization-header">
                   <img src="assets/icons/paintbrush-vertical.svg" alt="">
                   <h2>Personalização</h2>
                 </div>
-                <!-- CORES -->
-                <label class="cor-principal">Cor principal</label>
+              </div>
+              <!-- CORES -->
+              <label class="cor-principal">Cor principal</label>
 
-                <div class="colors">
+              <div class="colors">
 
-                  <span class="color cyan"></span>
-                  <span class="color purple"></span>
-                  <span class="color pink"></span>
-                  <span class="color orange"></span>
-                  <span class="color yellow"></span>
-                  <span class="color green"></span>
-                  <span class="color fushia"></span>
-                  <span class="color danger"></span>
-                  <span class="color ligh"></span>
-                  <span class="color lime"></span>
+                <span class="color cyan"></span>
+                <span class="color purple"></span>
+                <span class="color pink"></span>
+                <span class="color orange"></span>
+                <span class="color yellow"></span>
+                <span class="color green"></span>
+                <span class="color fushia"></span>
+                <span class="color danger"></span>
+                <span class="color ligh"></span>
+                <span class="color lime"></span>
 
-                </div>
+              </div>
 
-                <!-- TEMAS -->
-                <label>Tema do evento</label>
+              <!-- TEMAS -->
+              <label>Tema do evento</label>
 
-                <div class="themes-grid">
+              <div class="themes-grid">
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema" checked>
-                    <img src="assets/temas/aniversario.png">
-                    <span>Aniversário</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema" checked>
+                  <img src="assets/temas/aniversario.png">
+                  <span>Aniversário</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/infantil.png">
-                    <span>Infantil</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/infantil.png">
+                  <span>Infantil</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/formatura.png">
-                    <span>Formatura</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/formatura.png">
+                  <span>Formatura</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/casamento.png">
-                    <span>Casamento</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/casamento.png">
+                  <span>Casamento</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/cha-de-bebe.png">
-                    <span>Chá de bebê</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/cha-de-bebe.png">
+                  <span>Chá de bebê</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/cha-de-panela.png">
-                    <span>Chá de panela</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/cha-de-panela.png">
+                  <span>Chá de panela</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/carnaval.png">
-                    <span>Carnaval</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/carnaval.png">
+                  <span>Carnaval</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/pascoa.png">
-                    <span>Páscoa</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/pascoa.png">
+                  <span>Páscoa</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/sao-joao.png">
-                    <span>São João</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/sao-joao.png">
+                  <span>São João</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/hallowen.png">
-                    <span>Halloween</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/hallowen.png">
+                  <span>Halloween</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/natal.png">
-                    <span>Natal</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/natal.png">
+                  <span>Natal</span>
+                </label>
 
-                  <label class="theme-card">
-                    <input type="radio" name="tema">
-                    <img src="assets/temas/outro.png">
-                    <span>Outro</span>
-                  </label>
+                <label class="theme-card">
+                  <input type="radio" name="tema">
+                  <img src="assets/temas/outro.png">
+                  <span>Outro</span>
+                </label>
 
-                </div>
+              </div>
 
-                <!-- ESTILO -->
-                <div class="style-toggle">
-                  <span>Estilo</span>
-                  <label class="switch">
-                    <input type="checkbox" id="toggleMode">
-                    <span class="slider"></span>
-                  </label>
+              <!-- ESTILO -->
+              <div class="style-toggle">
+                <span>Estilo</span>
+                <label class="switch">
+                  <input type="checkbox" id="toggleMode">
+                  <span class="slider"></span>
+                </label>
 
-                  <span>Escuro</span>
-                </div>
-                <div class="contact">
+                <span>Escuro</span>
+              </div>
+
+              <div class="contact">
+
+                <div class="contact-header">
                   <!-- CONTATO -->
                   <img src="assets/icons/contact.svg" alt="contato">
                   <h3>Dados para contato</h3>
-                  <div class="form-contact">
-
-                    <div class="field-group full-width">
-                      <label for="nome-contato">Nome</label>
-                      <input type="text" id="nome-contato" placeholder="Nome completo" required>
-
-                      <span class="error-message">
-                        <img src="assets/icons/circle-alert (1).svg" alt="alerta-error"> Campo obrigatório
-                      </span>
-
-                    </div>
-
-                    <div class="field-group">
-                      <label for="email-contato">Email</label>
-                      <input type="email" id="email-contato" placeholder="exemplo@email.com">
-                    </div>
-
-                    <div class="field-group">
-                      <label for="tel-contato">Telefone</label>
-                      <input type="tel" id="tel-contato" placeholder="(99) 99999-9999">
-                    </div>
-                  </div>
                 </div>
-              </div>
-              <hr>
 
-              <!-- TERMOS -->
-              <div class="terms">
-                <label class="form-label">
-                  <input type="checkbox" checked>
-                  <span>
-                    Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de
-                      Privacidade</a>
-                  </span>
-                </label>
+                <div class="form-contact">
 
-                <label class="form-label">
-                  <input type="checkbox">
-                  <span> Aceito receber atualizações e promoções por e-mail
-                  </span>
-                </label>
+                  <div class="field-group full-width">
+                    <label for="nome-contato">Nome</label>
+                    <input type="text" id="nome-contato" placeholder="Nome completo" required>
 
-                <label class="form-label">
-                  <input type="checkbox">
-                  <span>
-                    Aceito receber atualizações e promoções por SMS
-                  </span>
-                </label>
-              </div>
-              <div class="button-final">
-                <button type="submit" class="btn"><img src="assets/icons/ticket.svg" alt=""> Gerar convite</button>
+                    <span class="error-message">
+                      <img src="assets/icons/circle-alert (1).svg" alt="alerta-error"> Campo obrigatório
+                    </span>
+
+                  </div>
+
+                  <div class="field-group">
+                    <label for="email-contato">Email</label>
+                    <input type="email" id="email-contato" placeholder="exemplo@email.com">
+                  </div>
+
+                  <div class="field-group">
+                    <label for="tel-contato">Telefone</label>
+                    <input type="tel" id="tel-contato" placeholder="(99) 99999-9999">
+                  </div>
+
+                </div>
+
               </div>
             </div>
+            <hr>
+            <!-- TERMOS -->
+            <div class="terms">
+              <label class="form-label">
+                <input type="checkbox" checked>
+                <span>
+                  Li e concordo com os <a href="#">Termos e Condições</a> e com a <a href="#">Política de
+                    Privacidade</a>
+                </span>
+              </label>
 
+              <label class="form-label">
+                <input type="checkbox">
+                <span> Aceito receber atualizações e promoções por e-mail
+                </span>
+              </label>
+
+              <label class="form-label">
+                <input type="checkbox">
+                <span>
+                  Aceito receber atualizações e promoções por SMS
+                </span>
+              </label>
+            </div>
+            <div class="button-final">
+              <button type="submit" class="btn"><img src="assets/icons/ticket.svg" alt=""> Gerar convite</button>
+            </div>
+          </form>
+        </main>
       </div>
+    </div>
+  </div>
 
-      <script>
-        const toggle = document.getElementById("toggleMode");
-        toggle.addEventListener("change", () => {
-          document.body.classList.toggle("light");
-        });
-      </script>
 
+  <script>
+    const form = document.querySelector('form');
+    const toggle = document.getElementById("toggleMode");
+
+    if (toggle) {
+      toggle.addEventListener("change", () => {
+        document.body.classList.toggle("light");
+      });
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Impede o reset da página
+
+      if (!form.checkValidity()) {
+        // Adiciona a classe que faz o CSS mostrar os erros
+        form.classList.add('visual-error');
+      } else {
+        form.classList.remove('visual-error');
+        alert("Convite gerado com sucesso! 🎉");
+      }
+    });
+  </script>
 </body>
 
 </html>
