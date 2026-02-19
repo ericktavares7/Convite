@@ -432,45 +432,7 @@ main h1 {
   height: 1.5rem;
 }
 
-.visual-error input:invalid {
-  border-color: var(--danger) !important;
-}
 
-.visual-error input:invalid ~ .error-message {
-  display: flex !important;
-}
-
-form:invalid .error-message {
-  /* Opcional: se quiser que tudo brilhe vermelho ao clicar no botão */
-}
-
-/* Garante que o input mostre o erro mesmo que não tenha sido tocado ainda */
-input:placeholder-shown:invalid {
-  /* Se quiser que apareça erro mesmo antes de digitar, remova o :not(:placeholder-shown) */
-}
-
-.error-message {
-  display: none;
-  color: var(--danger);
-  font-size: 14px;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-input:invalid:not(:placeholder-shown) {
-  border-color: #FF5959 !important;
-}
-
-input:invalid:not(:placeholder-shown)~.error-message {
-  display: flex !important; 
-}
-
-.error-message img {
-  width: 1rem !important;
-  height: 1rem !important;
-  flex-shrink: 0;
-}
 
 hr {
   border: none;
@@ -491,8 +453,14 @@ hr {
   display: flex;
   align-items: center;
   gap: 2rem;
-
 }
+
+.terms label span {
+  display: block; /* Garante que o texto se comporte como um parágrafo */
+  line-height: 1.5;
+  width: 100%; /* Ocupa todo o espaço disponível para não quebrar antes da hora */
+}
+
 
 .terms input[type="checkbox"]:checked {
   background: var(--input-base);
